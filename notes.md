@@ -35,4 +35,3 @@ Comprehensions:
           "#{item}, #{value}"
         end
         ```
-
