@@ -35,3 +35,10 @@ Comprehensions:
           "#{item}, #{value}"
         end
         ```
+
+Accessing elements in a list:
+    ```elixir
+    [color1, color2] = ["blue", "red"]
+    ```
+This will match the first element in the left hand array to the first element in the right hand array and assign the value from the right hand side to the variable in the left hand side list.
+
