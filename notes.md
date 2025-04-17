@@ -64,3 +64,28 @@ Erlang:
    :erlang.function_to_call()  
 ```
 
+Logic checks:
+    When possible, avoid using if statements and use case statements instead.
+
+```elixir
+# Bad
+{status, data} = some_function_that_returns_tuple()
+if status == :error do
+    return "Some error"
+else
+    return data
+end
+```
+
+```elixir
+# Good
+{status, data} = some_function_that_returns_tuple()
+case status do
+    :ok -> data
+    :error -> raise SomeException
+end
+```
+
+Utilize elixir's pattern matching features.
+
+
