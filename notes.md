@@ -30,15 +30,37 @@ Do nothing:
 Comprehensions:
     You can use List.flatten to flatten out nested lists
     You can use a comprehension loop on multiple lists. Ex:
-        ```elixir
-        for item <- items, value <- values do
-          "#{item}, #{value}"
-        end
-        ```
+
+```elixir
+for item <- items, value <- values do
+  "#{item}, #{value}"
+end
+    ```
 
 Accessing elements in a list:
-    ```elixir
-    [color1, color2] = ["blue", "red"]
-    ```
+
+```elixir
+[color1, color2] = ["blue", "red"]
+```
 This will match the first element in the left hand array to the first element in the right hand array and assign the value from the right hand side to the variable in the left hand side list.
+
+Accessing elements in a tuple:
+
+```elixir
+    {status, data} = Some.read()
+```
+
+Compilation:
+    Elixir -> Transpiled to  Erlang -> Compiled and executed on the BEAM (Bogdan Erland Abstrac Machine)
+
+
+BEAM:
+    BEAM is a virtual machine that executes the Elixir code similar to the JVM in Java
+
+Erlang:
+    You can run erlang code with ease in Elixir like so.
+
+```elixir
+   :erlang.function_to_call()  
+```
 
