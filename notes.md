@@ -88,4 +88,7 @@ end
 
 Utilize elixir's pattern matching features.
 
+Pipe operator.
+    A pipe operator can be used to chain method calls in a clean and concise way.
+
 
