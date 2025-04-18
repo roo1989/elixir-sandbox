@@ -90,5 +90,11 @@ Utilize elixir's pattern matching features.
 
 Pipe operator.
     A pipe operator can be used to chain method calls in a clean and concise way.
+```elixir
+Cards.create_deck()
+|> Cards.shuffle()
+|> Cards.deal(hand_size)
+```
+When calling a function using the pipe operator, the chained function first argument is the result of the previous function call.
 
 
