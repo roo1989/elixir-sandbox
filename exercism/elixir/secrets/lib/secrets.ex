@@ -21,18 +21,25 @@ defmodule Secrets do
 
   def secret_divide(secret) do
     fn param ->
-      param / secret
+      div(param, secret)
     end
   end
 
   def secret_and(secret) do
+    fn param ->
+      Bitwise.band(param, secret)
+    end
   end
 
   def secret_xor(secret) do
-    # Please implement the secret_xor/1 function
+    fn param ->
+      Bitwise.bxor(param, secret)
+    end
   end
 
   def secret_combine(secret_function1, secret_function2) do
-    # Please implement the secret_combine/2 function
+    fn param ->
+      secret_function2.(secret_function1.(param))
+    end
   end
 end
