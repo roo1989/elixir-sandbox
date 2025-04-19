@@ -98,3 +98,12 @@ Cards.create_deck()
 When calling a function using the pipe operator, the chained function first argument is the result of the previous function call.
 
 
+Anonymous functions:
+    In Elixir, anonymous functions are treated as a first class citizen. Meaning that: 
+        - Named and anonymous functions can be assigned to variables.
+        - Named and anonymous functions can be passed around like data as arguments
+            and return values
+        - Anonymous functions can be created dynamically.
+
+
+
