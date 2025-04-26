@@ -105,5 +105,25 @@ Anonymous functions:
             and return values
         - Anonymous functions can be created dynamically.
 
+Doctests:
+
+Elixir will look for a @doc string and an # Examples block to execute blocktest.
+
+- Example
+
+```elixir
+    @doc """
+    This is an example docstring with an included doctest.
+    
+    # Examples
+
+    iex > Module.some_function
+            |> another_funcion
+            |> third_function
+        [return_value]
+
+  """
+```
+
 
 
