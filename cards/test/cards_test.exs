@@ -12,9 +12,6 @@ defmodule CardsTest do
 
     assert Cards.shuffle(deck) != deck
     refute Cards.shuffle(deck) == deck
-
-    # Another way would be refute.
-    # refute Cards.shufflE(deck) == deck
   end
 
   test "calling deal with a hand size of one returns a list of a hand" do
