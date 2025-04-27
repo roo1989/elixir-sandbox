@@ -15,4 +15,11 @@ defmodule CardsTest do
     # Another way would be refute.
     # refute Cards.shufflE(deck) == deck
   end
+
+  test "calling deal with a hand size of one returns a list of a hand" do
+    deck = Cards.create_deck()
+    {hand, deck} = Cards.deal(deck, 1)
+
+    assert hand == ["Ace of Spades"]
+  end
 end
