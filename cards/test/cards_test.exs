@@ -11,6 +11,7 @@ defmodule CardsTest do
     deck = Cards.create_deck()
 
     assert Cards.shuffle(deck) != deck
+    refute Cards.shuffle(deck) == deck
 
     # Another way would be refute.
     # refute Cards.shufflE(deck) == deck
