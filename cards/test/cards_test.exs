@@ -22,4 +22,10 @@ defmodule CardsTest do
 
     assert hand == ["Ace of Spades"]
   end
+
+  test "Cards.contain? returns true if card is in deck" do
+    deck = Cards.create_deck()
+
+    assert Cards.contains?(deck, "Ace of Spades") == true
+  end
 end
