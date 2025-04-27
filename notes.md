@@ -1,5 +1,6 @@
 ### Elixir notes.
 
+
 Implicit returns:
     Elixir has a thing called implicit returns, so in a function, the last value in the function automatically gets returned.
 
@@ -92,8 +93,8 @@ Pipe operator.
     A pipe operator can be used to chain method calls in a clean and concise way.
 ```elixir
 Cards.create_deck()
-|> Cards.shuffle()
-|> Cards.deal(hand_size)
+    |> Cards.shuffle()
+    |> Cards.deal(hand_size)
 ```
 When calling a function using the pipe operator, the chained function first argument is the result of the previous function call.
 
@@ -121,7 +122,6 @@ Elixir will look for a @doc string and an # Examples block to execute blocktest.
             |> another_funcion
             |> third_function
         [return_value]
-
   """
 ```
 
