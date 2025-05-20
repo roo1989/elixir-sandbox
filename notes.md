@@ -159,3 +159,11 @@ last_name = "Olafsson"
 
 IO.puts("#{first_name} #{last_name}") # Will return Ragnar Olafsson
 ```
+
+Booleans:
+    - You have the basic true and false booleans.
+    - To represent empty valeus you have nil
+    - Under the hood, booleans are represented as :atoms
+
+Conditionals:
+    - The only falsy values in Elixir is false and nil, everything else is truthy.
