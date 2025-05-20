@@ -125,5 +125,37 @@ Elixir will look for a @doc string and an # Examples block to execute blocktest.
   """
 ```
 
+Atoms:
+    - An Atom is a constant where it's name is the value
+A practical use of atoms are when you have to reuse a string value.
 
+Ints:
+    - A nice syntastic sugar for large integers is seperating underscores
+```elixir
+# Without sugar
+one_million = 1000000
 
+# With sugar
+one_million = 1_000_000 # Will output the same as above
+```
+
+Strings:
+    - String values are defined with the double quotes.
+```elixir
+first_name = "Ragnar"
+```
+    - To concat strings you use the <> operator
+
+```elixir
+full_name = "Ragnar " <> "Olafsson" # Will return Ragnar Olafsson
+```
+
+    - Another way to do concat operation is string interpolation
+
+```elixir
+
+first_name = "Ragnar"
+last_name = "Olafsson"
+
+IO.puts("#{first_name} #{last_name}") # Will return Ragnar Olafsson
+```
