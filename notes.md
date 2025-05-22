@@ -167,3 +167,11 @@ Booleans:
 
 Conditionals:
     - The only falsy values in Elixir is false and nil, everything else is truthy.
+
+Lists:
+    - Lists in Elixir are singly linked lists
+    - Linked lists are represented as such [value, address_to_node_two] -> [value, address_to_node_tree] ... until the end of the list. 
+```elixir
+    list = [1,2,3]
+    IO.puts list # Will return [1,2,3]
+```
