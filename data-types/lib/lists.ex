@@ -9,7 +9,6 @@ defmodule Lists do
 
     # Removing items from the list.
     list = list -- [999, 1_000_000]
-    IO.puts(list)
 
     # Get the head of the list (first element) (part of the Kernel module)
     first = hd(list)
