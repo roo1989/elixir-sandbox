@@ -1,18 +1,9 @@
 defmodule DataTypes do
-  @moduledoc """
-  Documentation for `DataTypes`.
-  """
+  require Basic
+  require Functional
+  require Lists
 
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> DataTypes.hello()
-      :world
-
-  """
-  def hello do
-    :world
+  def main do
+    :ok
   end
 end
