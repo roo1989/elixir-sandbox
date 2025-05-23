@@ -22,8 +22,9 @@
    elem(my_tulpe, 0) # Will return the 0th element of the tuple ("roo").
    @end
 
-* Keyword Lists
-  Keywords list are basically optional function arguments, represented as a list of tuples.
+* List Keywords
+  ** What are list keywords  
+    Keywords list are basically optional function arguments, represented as a list of tuples.
 
   @code elixir
   String.split("1 2 3", " ") # Will return ["1", "2", "3"]
@@ -38,4 +39,9 @@
 
   test_func(name: "Oli") # Returns Oli
   @end
+
+
   
+* Maps
+** What are maps?
+  Maps are a key-value store of dynamic size.
