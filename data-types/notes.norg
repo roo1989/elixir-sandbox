@@ -1,0 +1,23 @@
+* Tuples
+** What are tuples?
+   Tuples are a collections data structure of a fixed size, unlike lists that are more dynamic.
+
+   Example:
+   @code elixir
+   my_list = [1, 2, 3]
+   my_list ++ [4, 5, 6] # Valid
+
+   my_tuple = {1, 2, 3}
+   my_tuple ++ {4, 5, 6} # Invalid
+   @end
+
+   Another difference from lists, is that tuples are saved sequentually in memory, while lists are not (linked lists).
+   Accessing elements in a tuple is very cheap since they are stored sequentually in memory.
+
+   Accessing elements of a tuple is done via the elem method that's a part of the Kernel module.
+
+   @code elixir 
+   my_tuple = {"roo", 2, 3}
+   # Accessing elements using the elem function.
+   elem(my_tulpe, 0) # Will return the 0th element of the tuple ("roo").
+   @end
