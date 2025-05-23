@@ -48,15 +48,12 @@ defmodule FreelancerRatesTest do
 
     @tag task_id: 3
     test "the result is rounded up" do
-      # 11_052.8
       assert FreelancerRates.monthly_rate(62.8, 0.0) == 11_053
-      # 11_475.2
       assert FreelancerRates.monthly_rate(65.2, 0.0) == 11_476
     end
 
     @tag task_id: 3
     test "gives a discount" do
-      # 11_792 - 12% * 11_792 = 10_376.96
       assert FreelancerRates.monthly_rate(67, 12.0) == 10_377
     end
   end
