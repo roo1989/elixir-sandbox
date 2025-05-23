@@ -21,3 +21,21 @@
    # Accessing elements using the elem function.
    elem(my_tulpe, 0) # Will return the 0th element of the tuple ("roo").
    @end
+
+* Keyword Lists
+  Keywords list are basically optional function arguments, represented as a list of tuples.
+
+  @code elixir
+  String.split("1 2 3", " ") # Will return ["1", "2", "3"]
+
+  # With keyword lists.
+  String.split("1      2      3", " ", trim=true) # Returns ["1", "2", "3"]
+
+  # Example with a function.
+  def test_func(opts \\ []) do
+	  Keyword.get(opts, :name, "Ragnar")
+  end
+
+  test_func(name: "Oli") # Returns Oli
+  @end
+  
