@@ -19,11 +19,11 @@ defmodule Tuples do
     case File.read(file) do
       {:ok, data} ->
         Logger.info("File content: #{data}")
-        :ok
 
       {:error, reason} ->
         Logger.error("Some error happened: #{reason}")
-        :error
     end
+
+    :ok
   end
 end
