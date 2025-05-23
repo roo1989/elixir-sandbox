@@ -170,8 +170,14 @@ Conditionals:
 
 Lists:
     - Lists in Elixir are singly linked lists
-    - Linked lists are represented as such [value, address_to_node_two] -> [value, address_to_node_tree] ... until the end of the list. 
-```elixir
+- Linked lists are represented as such `[value, address_to_node_two] -> [value, address_to_node_tree]`
+
+
     list = [1,2,3]
     IO.puts list # Will return [1,2,3]
+
+
+Arguments:
+    When you see a function signature example String.upcase/2 the /2 means that the function expects two arguments.
+    When you see an exlamaption point, that means that the function returns an error, otherwise it returns a tuple with an :error atom.
 ```
