@@ -79,3 +79,14 @@
    %{colon_seperated_map | :key: "new value"}
    @end
 
+
+* Mix
+** What is Mix 
+   Mix is the build tool for Elixir
+** Common mix commands
+   - mix compile: Compiles your elixir program.
+   - mix format: Formats your elixir code.
+   - mix test: Runs your elixir unit tests
+   - mix new <name>: Creates a new elixir project.
+   -- Creates folder structure, gitignore, lib, test folder ect.
+   - mix help: Shows you all commands available.
