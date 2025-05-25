@@ -1,138 +1,146 @@
 * Tuples
 ** What are tuples?
-   Tuples are a collections data structure of a fixed size, unlike lists that are more dynamic.
+	 Tuples are a collections data structure of a fixed size, unlike lists that are more dynamic.
 
 ** Bullets
-   - Difference from lists, is that tuples are saved sequentually in memory, while lists are not (linked lists).
-   - Accessing elements of a tuple is very cheap since they are stored sequentually in memory.
-   - Accessing elements of a tuple is done via the elem method that's a part of the Kernel module.
+	 - Difference from lists, is that tuples are saved sequentually in memory, while lists are not (linked lists).
+	 - Accessing elements of a tuple is very cheap since they are stored sequentually in memory.
+	 - Accessing elements of a tuple is done via the elem method that's a part of the Kernel module.
 
 
 ** Example:
-   @code elixir
-   my_list = [1, 2, 3]
-   my_list ++ [4, 5, 6] # Valid
+	 @code elixir
+	 my_list = [1, 2, 3]
+	 my_list ++ [4, 5, 6] # Valid
 
-   my_tuple = {1, 2, 3}
-   my_tuple ++ {4, 5, 6} # Invalid
+	 my_tuple = {1, 2, 3}
+	 my_tuple ++ {4, 5, 6} # Invalid
 
-   my_tuple = {"roo", 2, 3}
-   elem(my_tulpe, 0) # Will return the 0th element of the tuple ("roo").
-   @end
+	 my_tuple = {"roo", 2, 3}
+	 elem(my_tulpe, 0) # Will return the 0th element of the tuple ("roo").
+	 @end
 
 
 * List Keywords
-  ** What are list keywords  
-    Keywords list are basically optional function arguments, represented as a list of tuples.
+** What are list keywords  
+	 Keywords list are basically optional function arguments, represented as a list of tuples.
 
-  ** Example
-     @code elixir
-     String.split("1 2 3", " ") # Will return ["1", "2", "3"]
+** Example
+	 @code elixir
+	 String.split("1 2 3", " ") # Will return ["1", "2", "3"]
 
-     # With keyword lists.
-     String.split("1      2      3", " ", trim=true) # Returns ["1", "2", "3"]
+	 # With keyword lists.
+	 String.split("1      2      3", " ", trim=true) # Returns ["1", "2", "3"]
 
-     # Example with a function.
-     def test_func(opts \\ []) do
-	     Keyword.get(opts, :name, "Ragnar")
-     end
+	 # Example with a function.
+	 def test_func(opts \\ []) do
+	 Keyword.get(opts, :name, "Ragnar")
+	 end
 
-     test_func(name: "Oli") # Returns Oli
-     @end
+	 test_func(name: "Oli") # Returns Oli
+	 @end
 
 
-  
+
 * Maps
 ** What are maps?
-   Maps are a key-value store of dynamic size, represented internally as hash maps.
+	 Maps are a key-value store of dynamic size, represented internally as hash maps.
 ** Bullets
-   - Map keys(or fields) can be of any type (string, number, atom etc..)
-   - You can point to the value either with => or :
-   - If you use a colon to seperate the key and value and the key is of type atom, you can skip the colon prefix on the atom.
-   - Atoms are the type commonly used as the type for keys in maps
-   - To access elements in a map, you can use a square bracket, dot notation or the Map.get() function.
+	 - Map keys(or fields) can be of any type (string, number, atom etc..)
+	 - You can point to the value either with => or :
+	 - If you use a colon to seperate the key and value and the key is of type atom, you can skip the colon prefix on the atom.
+	 - Atoms are the type commonly used as the type for keys in maps
+	 - To access elements in a map, you can use a square bracket, dot notation or the Map.get() function.
 ** Common operations
-   - Access an element: Map.get(map, key, default \\ nil)
-   - Adding an element: Map.put(map, new_key, value)
+	 - Access an element: Map.get(map, key, default \\ nil)
+	 - Adding an element: Map.put(map, new_key, value)
 ** Code
-   @code elixir
-   traditional_map = %{:name => "Ragnar", 1 => false, "age" => 35}
+	 @code elixir
+	traditional_map = %{:name => "Ragnar", 1 => false, "age" => 35}
 
-   colon_seperated_map = %{name: "Ragnar", age: 35}
+	colon_seperated_map = %{name: "Ragnar", age: 35}
 
-   # Accessing using []
-   traditional_map[:name]
+	# Accessing using []
+	traditional_map[:name]
 
-   # Accessing using the dot . notation
-   colon_seperated_map.name
+	# Accessing using the dot . notation
+	colon_seperated_map.name
 
-   # Accessing with the Map.get() function
-   Map.get(colon_seperated_map, :name)
+	# Accessing with the Map.get() function
+	Map.get(colon_seperated_map, :name)
 
-   # Accessing with Map.get() with a default value.
-   Map.get(colon_seperated_map, :occupation, "Student")
+	# Accessing with Map.get() with a default value.
+	Map.get(colon_seperated_map, :occupation, "Student")
 
-   # Add an element to a map.
-   Map.put(colon_seperated_map, :new_key, "New value")
+	# Add an element to a map.
+	Map.put(colon_seperated_map, :new_key, "New value")
 
-   # Updating an element
-   %{colon_seperated_map | :key: "new value"}
-   @end
+	# Updating an element
+	%{colon_seperated_map | :key: "new value"}
+	 @end
 
 
 * Mix
 ** What is Mix 
-   Mix is the build tool for Elixir
+	 Mix is the build tool for Elixir
 ** Common mix commands
-   - mix compile: Compiles your elixir program.
-   - mix format: Formats your elixir code.
-   - mix test: Runs your elixir unit tests
-   - mix new <name>: Creates a new elixir project.
-   -- Creates folder structure, gitignore, lib, test folder ect.
-   - mix help: Shows you all commands available.
+	 - mix compile: Compiles your elixir program.
+	 - mix format: Formats your elixir code.
+	 - mix test: Runs your elixir unit tests
+	 - mix new <name>: Creates a new elixir project.
+	 -- Creates folder structure, gitignore, lib, test folder ect.
+	 - mix help: Shows you all commands available.
 
 * Integers
 ** Common functions.
 *** Some common functions include:
-    - Parse: Integer.parse("<string>").
-    - To string: Integer.to_string(123) would return "123"
-    - Is odd: Integer.is_odd(int) checks if an integer is an odd number.
-    - Is even: Integer.is_even(int) same as above for even numbers
-    - Mod: Will always return a negative result unlike rem.
+		- Parse: Integer.parse("<string>").
+		- To string: Integer.to_string(123) would return "123"
+		- Is odd: Integer.is_odd(int) checks if an integer is an odd number.
+		- Is even: Integer.is_even(int) same as above for even numbers
+		- Mod: Will always return a negative result unlike rem.
 ** Bullets
-   - Integers in Elixir can grow as large as your memory allows, there is no fixed size.
-   - BEAM uses tagged pointers to distinguish small integers from other types.
-   - Big integers are heap-allocated and reference counted
+	 - Integers in Elixir can grow as large as your memory allows, there is no fixed size.
+	 - BEAM uses tagged pointers to distinguish small integers from other types.
+	 - Big integers are heap-allocated and reference counted
 * Pattern matching
 ** Bullets
-   - In elixir, variables bind to values, acting as references rather than mere containers.
-   - Once you bind a value to a variable, it cannot be altered. But, you can bind it to something else.
-      - Example.
-      @code elixir
+	 - In elixir, variables bind to values, acting as references rather than mere containers.
+	 - Once you bind a value to a variable, it cannot be altered. But, you can bind it to something else.
+	 - Example.
+	 @code elixir
 	my_variable = 10
 	IO.puts(my_variable) # Returns 10
 	my_variable = 20
 	IO.puts(my_variable) # Returns 20
-      @end
-   - If the right hand does not match the left hand, it will raise a MatchError.
-   - You can match most data types in Elixir (lists, maps, tuples etc.)
-   - Ignoring values is done with the underscore _ symbol.
+	 @end
+	 - If the right hand does not match the left hand, it will raise a MatchError.
+	 - You can match most data types in Elixir (lists, maps, tuples etc.)
+	 - Ignoring values is done with the underscore _ symbol.
 * Modules
 ** Bullets
-   - A module is simply a way for you to group functions together under a single namespace.
-   - Modules nested inside of directories have to be fully defined: MyDirectory.MyModule
-   - Naming convention is CamelCase for the module definition, and snake_case for the file name.
-   - Best practices ask you have a single module per file.
-   - Creating documentation for a module, is done with @moduledoc """""" (see example)
-   - You can define constants within a module definition that is accessable throughout the module it is defined in.
+	 - A module is simply a way for you to group functions together under a single namespace.
+	 - Modules nested inside of directories have to be fully defined: MyDirectory.MyModule
+	 - Naming convention is CamelCase for the module definition, and snake_case for the file name.
+	 - Best practices ask you have a single module per file.
+	 - Creating documentation for a module, is done with @moduledoc """""" (see example)
+	 - You can define constants within a module definition that is accessable throughout the module it is defined in.
 ** Code
-   @code elixir
-   defmodule MyFirstModule do
-	   @moduledoc """
-           This describes what my module does. 
-	   """
+	 @code elixir
+	 defmodule MyFirstModule do
+	 @moduledoc """
+	 This describes what my module does. 
+	 """
 
-	   @my_constant 52
-   end
-   @end
+	 @my_constant 52
+	 end
+	 @end
 
+
+* Named functions.
+** Bullets
+	 - To define a function you use the def keyword.
+		- Public functions are available to other modules.
+	 - To define a private function you use the defp keyword.
+		- Private functions are only accessable within the module that they are defined in.
+	 - In Elixir, a function’s arity is the number of arguments it takes, represented as function_name/arity (e.g., add/2 takes two arguments).
