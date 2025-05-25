@@ -103,3 +103,17 @@
    - Integers in Elixir can grow as large as your memory allows, there is no fixed size.
    - BEAM uses tagged pointers to distinguish small integers from other types.
    - Big integers are heap-allocated and reference counted
+* Pattern matching
+** Bullets
+   - In elixir, variables bind to values, acting as references rather than mere containers.
+   - Once you bind a value to a variable, it cannot be altered. But, you can bind it to something else.
+      - Example.
+      @code elixir
+	my_variable = 10
+	IO.puts(my_variable) # Returns 10
+	my_variable = 20
+	IO.puts(my_variable) # Returns 20
+      @end
+   - If the right hand does not match the left hand, it will raise a MatchError.
+   - You can match most data types in Elixir (lists, maps, tuples etc.)
+   - Ignoring values is done with the underscore _ symbol.
