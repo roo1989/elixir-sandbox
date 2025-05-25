@@ -90,3 +90,16 @@
    - mix new <name>: Creates a new elixir project.
    -- Creates folder structure, gitignore, lib, test folder ect.
    - mix help: Shows you all commands available.
+
+* Integers
+** Common functions.
+*** Some common functions include:
+    - Parse: Integer.parse("<string>").
+    - To string: Integer.to_string(123) would return "123"
+    - Is odd: Integer.is_odd(int) checks if an integer is an odd number.
+    - Is even: Integer.is_even(int) same as above for even numbers
+    - Mod: Will always return a negative result unlike rem.
+** Bullets
+   - Integers in Elixir can grow as large as your memory allows, there is no fixed size.
+   - BEAM uses tagged pointers to distinguish small integers from other types.
+   - Big integers are heap-allocated and reference counted
