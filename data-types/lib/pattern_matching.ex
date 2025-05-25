@@ -32,6 +32,6 @@ defmodule PatternMatching do
   end
 
   def ignore_example do
-    _name = "Ragnar"
+    {_, age} = {1, 35}
   end
 end
