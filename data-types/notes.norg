@@ -117,3 +117,22 @@
    - If the right hand does not match the left hand, it will raise a MatchError.
    - You can match most data types in Elixir (lists, maps, tuples etc.)
    - Ignoring values is done with the underscore _ symbol.
+* Modules
+** Bullets
+   - A module is simply a way for you to group functions together under a single namespace.
+   - Modules nested inside of directories have to be fully defined: MyDirectory.MyModule
+   - Naming convention is CamelCase for the module definition, and snake_case for the file name.
+   - Best practices ask you have a single module per file.
+   - Creating documentation for a module, is done with @moduledoc """""" (see example)
+   - You can define constants within a module definition that is accessable throughout the module it is defined in.
+** Code
+   @code elixir
+   defmodule MyFirstModule do
+	   @moduledoc """
+           This describes what my module does. 
+	   """
+
+	   @my_constant 52
+   end
+   @end
+
